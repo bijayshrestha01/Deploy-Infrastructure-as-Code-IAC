@@ -12,20 +12,20 @@ The second part is to interpret the instructions as well as your own diagram and
 
 It is a best practice to separate infrastructure networks and infrastructure servers script files and their corresponding script parameters files. The insfrastructures in the diagram above have been created one by one and been validated on the AWS console. This way it is easier to debug the errors you run into instead of creating the stacks all at once.
 
-##Instructions to deploy:
-######Run below code to create a network stack
+## Instructions to deploy:
+###### Run below code to create a network stack
 ./create.sh UdagramApp my_infrastructure_network.yml my_infrastructure_network_params.json
 
-######After the stack is created run the below code to update it with additional infrastructures
+###### After the stack is created run the below code to update it with additional infrastructures
 .update.sh UdagramApp my_infrastructure_network.yml my_infrastructure_network_params.json
 
-######Run below code to create a server stack
+###### Run below code to create a server stack
 ./create.sh UdagramApp my_infrastructure_servers.yml my_infrastructure_servers_params.json
 
-######After the stack is created run the belwo code to update it with additional infrastructures
+###### After the stack is created run the belwo code to update it with additional infrastructures
 ./update UdagramApp my_infrastructure_servers.yml my_infrastructure_servers_params.json
 
-##Files incuded are:
+## Files incuded are:
 create.sh - CloudFormation create stack script
 update.sh - CloudFormation update stack script
 destroy.sh - CloudFormation delete stack script
